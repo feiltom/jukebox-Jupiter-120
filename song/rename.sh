@@ -1,0 +1,23 @@
+for i in a b c d e 
+do
+echo "cp ${i}12.mp3 mirage/${i}10.mp3"
+echo "cp ${i}14.mp3 mirage/${i}12.mp3"
+echo "cp ${i}16.mp3 mirage/${i}14.mp3"
+echo "cp ${i}18.mp3 mirage/${i}16.mp3"
+echo "cp ${i}32.mp3 mirage/${i}18.mp3"
+echo "cp ${i}34.mp3 mirage/${i}30.mp3"
+echo "cp ${i}36.mp3 mirage/${i}32.mp3"
+echo "cp ${i}38.mp3 mirage/${i}34.mp3"
+echo "cp ${i}52.mp3 mirage/${i}36.mp3"
+echo "cp ${i}54.mp3 mirage/${i}38.mp3"
+echo "cp ${i}56.mp3 mirage/${i}50.mp3"
+echo "cp ${i}58.mp3 mirage/${i}52.mp3"
+echo "cp ${i}72.mp3 mirage/${i}54.mp3"
+echo "cp ${i}74.mp3 mirage/${i}56.mp3"
+echo "cp ${i}76.mp3 mirage/${i}58.mp3"
+echo "cp ${i}78.mp3 mirage/${i}70.mp3"
+echo "cp ${i}92.mp3 mirage/${i}72.mp3"
+echo "cp ${i}94.mp3 mirage/${i}74.mp3"
+echo "cp ${i}96.mp3 mirage/${i}76.mp3"
+echo "cp ${i}98.mp3 mirage/${i}78.mp3"
+done

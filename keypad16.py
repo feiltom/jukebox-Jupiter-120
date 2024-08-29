@@ -34,21 +34,21 @@ class keypad_module:
   PULUPA = 0x0C		# PullUp enable register base address
   GPIOA  = 0x12		# GPIO pin register base address
   OLATA  = 0x14		# Output Latch register base address
-  
+
   # Keypad Column output values
   KEYCOL = [0b11110111,0b11111011,0b11111101,0b11111110]
 
   # Keypad Keycode matrix
-  KEYCODE  = [['8','9','1','*'], # KEYCOL0
-              ['6','7','8','0'], # KEYCOL1
-              ['4','5','9','#'], # KEYCOL2
-              ['2','3','C','D']] # KEYCOL3
+  KEYCODE  = [['0','1','9','*'], # KEYCOL0
+              ['2','3','0','6'], # KEYCOL1
+              ['6','5','1','#'], # KEYCOL2
+              ['8','7','7','D']] # KEYCOL3
 
   # Decide the row
   DECODE = [0,0,0,0, 0,0,0,0, 0,0,0,1, 0,2,3,0]
 
   # initialize I2C comm, 1 = rev2 Pi, 0 for Rev1 Pi
-  i2c = smbus.SMBus(1) 
+  i2c = smbus.SMBus(1)
 
   # get a keystroke from the keypad
   def getch(self):
@@ -74,8 +74,8 @@ class keypad_module:
     self.i2c.write_byte_data(self.I2CADDR,self.PULUPA+self.port,0xF0) # enable upper 4 bits pullups
 
 # test code
-def main(): 
-  keypad = keypad_module(0x20,1,0)  
+def main():
+  keypad = keypad_module(0x20,0,0)
   while 1:
     ch = keypad.getch()
     print(ch)
